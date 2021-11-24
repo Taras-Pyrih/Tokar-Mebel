@@ -16,31 +16,31 @@
         <div class="header-content-top-row">
           <a href=""><img src="assets/images/logo.png" alt="logo" class="logo"></a>
           <div class="header-content-top-row__right-side">
-            <div class="contact-us">
-              <p class="paragraph paragraph_header">Связаться напрямую:</p>
+            <div>
+              <p class="contact-us">Связаться напрямую:</p>
               <div class="messengers">
-                <img src="assets/images/telegram.png" alt="telegram">
-                <img src="assets/images/whatsapp.png" alt="whatsapp">
-                <img src="assets/images/viber.png" alt="viber">
+                <a href=""><img src="assets/images/telegram.png" alt="telegram"></a>
+                <a href=""><img src="assets/images/whatsapp.png" alt="whatsapp"></a>
+                <a href=""><img src="assets/images/viber.png" alt="viber"></a>
               </div>
             </div>
             <div>
               <p class="telephone">+3 80 (67) 175 56 30</p>
-              <p class="working hours">с 09:00 до 18:00 (пн-вс)</p>
+              <p class="working-hours">с 09:00 до 18:00 (пн-вс)</p>
             </div>
             <div>
-              <a href="" class="request-a-call-button">Заказать звонок</a>
-              <p class="paragraph paragraph_header">Бесплатно по Украине</p>
+              <a href="" class="button button__background button_request-a-call">Заказать звонок</a>
+              <p class="for-free">Бесплатно по Украине</p>
             </div>
             <select class="languages">
-              <option value="ua">
-                <img src="" alt="ua">
+              <option value="ua">1
+                <!-- <img src="assets/images/ua.png" alt="ua"> -->
               </option>
-              <option value="ru">
-                <img src="" alt="ru">
+              <option value="ru">2
+                <!-- <img src="assets/images/ru.png" alt="ru"> -->
               </option>
-              <option value="en">
-                <img src="" alt="en">
+              <option value="en">3
+                <!-- <img src="assets/images/us.png" alt="us"> -->
               </option>
             </select>
           </div>
@@ -73,17 +73,16 @@
         <div class="what-we-do-content">
           <div class="what-we-do-content__left-side">
             <h1 class="head-one">Производим и устанавливаем строения разных видов в Украине</h1>
-            <p class="paragraph">Индивидуально под ваш запрос построим дом, ресторан, баню, беседку, мангал или любую другую постройку</p>
+            <p class="paragraph paragraph_what-we-do">Индивидуально под ваш запрос построим дом, ресторан, баню, беседку, мангал или любую другую постройку</p>
             <div class="buttons">
-              <a href="" class="houses-catalog-button">Перейти в каталог домов</a>
-              <a href="" class="bathhouses-catalog-button">
+              <a href="" class="button button__background button_houses-catalog">Перейти в каталог домов</a>
+              <a href="" class="button button_bathhouses-catalog">
                 <img src="assets/images/reference-button.svg" alt="reference-button">
                 <span>Каталог бань</span>
               </a>
             </div>
           </div>
           <div class="what-we-do-slider-block">
-            <img src="assets/images/white-arrow-left.svg" alt="white-arrow-left" class="arrow arrow_left">
             <div class="what-we-do-slider">
               <div class="bathhouse-screenshot">
                 <img src="assets/images/bathhouse-screenshot.png" alt="bathhouse-screenshot">
@@ -101,7 +100,11 @@
                 <img src="assets/images/bathhouse-screenshot.png" alt="bathhouse-screenshot">
               </div>
             </div>
-            <img src="assets/images/white-arrow-right.svg" alt="white-arrow-right" class="arrow arrow_right">
+            <div class="arrows">
+              <img src="assets/images/white-arrow-left.svg" alt="white-arrow-left" class="arrow arrow_left">
+              <span class="current-bathhouse-screenshot"></span>
+              <img src="assets/images/white-arrow-right.svg" alt="white-arrow-right" class="arrow arrow_right">
+            </div>
           </div>
         </div>
       </div>
@@ -527,5 +530,28 @@
       публичной офертой.
     </p>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+	<script src="assets/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      let leftArrowFirst = document.querySelector(".what-we-do-slider-block .arrow_left");
+      let rightArrowFirst = document.querySelector(".what-we-do-slider-block .arrow_right");
+
+      $(".what-we-do-slider").slick({
+        prevArrow: leftArrowFirst,
+        nextArrow: rightArrowFirst
+      });
+
+      let currentBathhouseScreenshot = document.querySelector(".current-bathhouse-screenshot");
+      currentBathhouseScreenshot.innerHTML = "1/" + $(".what-we-do-slider").slick("getSlick").slideCount;
+
+      $(".what-we-do-slider").on("beforeChange", function(event, slick, currentSlide, nextSlide) {       
+        currentBathhouseScreenshot.innerHTML = `${nextSlide + 1}/${slick.slideCount}`;
+      });
+    });
+  </script>
 </body>
 </html>
