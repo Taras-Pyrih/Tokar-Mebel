@@ -33,10 +33,6 @@
   font-weight: 800;
 }
 
-
-
-
-
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +43,10 @@
 .wrapper {
   width: 80%;
   margin: auto;
+}
+
+.header {
+  background: #FFFBF7;
 }
 
 .header-content {
@@ -87,6 +87,7 @@
 
 .working-hours {
   font-family: Gilroy;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.5em;
   letter-spacing: 0.08em;
@@ -106,7 +107,13 @@
 
 }
 
-.button__background {
+.button.button_acquaint-with-projects {
+  padding: 0;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.button_background {
   background: linear-gradient(180deg, #F39C32 0%, #CB8734 100%);
   box-shadow: 0px 4px 4px rgba(203, 135, 52, 0.2);
   border-radius: 4px;
@@ -118,6 +125,7 @@
 
 .for-free {
   font-family: Gilroy;
+  font-weight: 400;
   font-size: 11px;
   line-height: 1.8em;
   letter-spacing: 0.08em;
@@ -207,6 +215,10 @@ option:nth-child(3)::after {
   color: #FFFFFF;
 }
 
+.what-we-do {
+  background: #FFFBF7;
+}
+
 .what-we-do-content {
   display: flex;
   justify-content: space-between;
@@ -219,12 +231,12 @@ option:nth-child(3)::after {
 }
 
 .what-we-do-slider-block {
+  position: relative;
   width: 50%;
 }
 
 .head-one {
   font-family: Gilroy;
-  font-style: normal;
   font-weight: 800;
   font-size: 38px;
   line-height: 1.3em;
@@ -240,6 +252,7 @@ option:nth-child(3)::after {
 }
 
 .paragraph_what-we-do {
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.7em;
   padding: 15px 0;
@@ -255,37 +268,44 @@ option:nth-child(3)::after {
   padding: 20px 30px;
 }
 
-.button_bathhouses-catalog {
+.button_bathhouses-catalog,
+.button_acquaint-with-projects {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 10px;
   font-weight: 600;
   color: #CB8734;
 }
 
-.what-we-do-slider-block {
-  position: relative;
-}
-
-.bathhouse-screenshot img {
-  margin: auto;
+.bathhouse-screenshot span {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .arrows {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.arrows_first {
   position: absolute;
   bottom: 40px;
-  right: 50px;
+  right: 40px;
+}
+
+.arrows_second {
+  position: absolute;
+  bottom: 35px;
+  right: calc(50% - 40px);
 }
 
 .arrow {
   cursor: pointer;
 }
 
-.current-bathhouse-screenshot {
+.current-bathhouse-screenshot,
+.current-manufacturing-screenshot {
   font-family: Gilroy;
   font-weight: 600;
   font-size: 16px;
@@ -306,13 +326,17 @@ option:nth-child(3)::after {
   font-size: 36px;
   line-height: 1.6em;
   color: #2B2A28;
-  padding-bottom: 30px;
+}
+
+.reasons-why {
+  background: linear-gradient(to top, transparent 50%, #FFFBF7 50%);
 }
 
 .reasons-why-list {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding-top: 30px;
 }
 
 .reasons-why-list div:first-child {
@@ -340,5 +364,189 @@ option:nth-child(3)::after {
 }
 
 .projects-catalog-content {
-  padding-top: 145px;
+  padding: 145px 0 115px;
+}
+
+.projects-catalog-content__left-side {
+  position: relative;
+  width: 60%;
+}
+
+.projects-group_row-one {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+}
+
+.domestic-project,
+.commercial-project {
+  width: 48%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 0px 40px 0px 0px;
+}
+
+.domestic-project > img,
+.commercial-project > img {
+  display: block;
+  width: 97%;
+  margin: auto;
+  padding-top: 5px;
+}
+
+.domestic-project div,
+.commercial-project div {
+  padding: 35px 20px 50px 50px;
+}
+
+.domestic-project .paragraph,
+.commercial-project .paragraph {
+  padding: 10px 0 15px;
+}
+
+.head-three {
+  font-family: Gilroy;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.2em;
+  color: #2B2A28;
+}
+
+.projects-group_row-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 0px 40px 0px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.garden-project {
+  width: 37.5%;
+  padding-left: 50px;
+}
+
+.garden-project .paragraph {
+  padding: 10px 0 15px;
+}
+
+.projects-group_row-two > img {
+  width: 52.5%;
+  margin: 5px 5px 5px 0;
+}
+
+.projects-catalog-background {
+  position: absolute;
+  top: 20px;
+  right: -87.5%;
+}
+
+.how-we-build {
+  background: #FFFBF7;
+}
+
+.how-we-build-content {
+  padding: 115px 0 145px;
+}
+
+.construction-stages-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+.construction-stage {
+  position: relative;
+  width: 48.5%;
+  margin-bottom: 60px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 8px;
+}
+
+.stage-description {
+  padding: 40px 40px 50px 45px;
+}
+
+.stage-description .head-three {
+  white-space: pre-line;
+}
+
+.stage-description .paragraph {
+  padding-top: 15px;
+}
+
+.stage-description img {
+  position: absolute;
+}
+
+.construction-stage:nth-child(1) .stage-description img {
+  right: 25px;
+  top: -45px;
+}
+
+.construction-stage:nth-child(2) .stage-description img {
+  right: 15px;
+  top: -80px;
+}
+
+.construction-stage:nth-child(3) .stage-description img {
+  right: 15px;
+  top: -25px;
+}
+
+.construction-stage:nth-child(4) .stage-description img {
+  right: 40px;
+  top: -45px;
+}
+
+.stage-number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.stage-number::after {
+  position: absolute;
+  right: 20px;
+  bottom: -30px;
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 140px;
+  line-height: 1em;
+  color: #CB8734;
+  opacity: 0.1;
+}
+
+.construction-stage:nth-child(1) .stage-number::after {
+  content: "01";
+}
+
+.construction-stage:nth-child(2) .stage-number::after {
+  content: "02";
+}
+
+.construction-stage:nth-child(3) .stage-number::after {
+  content: "03";
+}
+
+.construction-stage:nth-child(4) .stage-number::after {
+  content: "04";
+}
+
+.how-we-build-slider-block {
+  position: relative;
+}
+
+.how-we-build-content-bottom-row .buttons {
+  padding-top: 40px;
 }
