@@ -194,8 +194,6 @@ option:nth-child(3)::after {
 .list__item {
   list-style-type: none;
   flex-grow: 1;
-  padding: 12px 0;
-  margin: 8px 0;
   border-right: 1px dashed rgba(229, 235, 242, 0.4);
   text-align: center;
 }
@@ -205,13 +203,16 @@ option:nth-child(3)::after {
 }
 
 .list__link {
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
   font-family: Gilroy;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.08em;
   color: #FFFFFF;
+  text-decoration: none;
+  padding: 20px 0;
 }
 
 .what-we-do {
@@ -295,8 +296,9 @@ option:nth-child(3)::after {
 
 .arrows_second {
   position: absolute;
-  right: calc(50% - 40px);
+  right: 50%;
   bottom: 35px;
+  transform: translateX(50%);
 }
 
 .arrow {
@@ -338,20 +340,8 @@ option:nth-child(3)::after {
   padding-top: 30px;
 }
 
-.reasons-why-list div:first-child {
-  width: 15%;
-}
-
-.reasons-why-list div:nth-child(2) {
+.reasons-why-list div {
   width: 20%;
-}
-
-.reasons-why-list div:nth-child(3) {
-  width: 21%;
-}
-
-.reasons-why-list div:last-child {
-  width: 21.5%;
 }
 
 .reasons-why-list img {
@@ -367,22 +357,23 @@ option:nth-child(3)::after {
 }
 
 .projects-catalog-content__left-side {
-  position: relative;
-  width: 60%;
+  background: url(assets/images/projects-catalog-background.png) right no-repeat;
+  background-size: content;
 }
 
 .projects-group_row-one {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 30px;
   position: relative;
   z-index: 1;
-  padding-top: 20px;
+  width: 60%;
+  padding: 20px 0 30px;
 }
 
 .domestic-project,
 .commercial-project {
   width: 48%;
+  padding: 5px 5px 0;
   background: #FFFFFF;
   box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
   border-radius: 0px 40px 0px 0px;
@@ -391,13 +382,12 @@ option:nth-child(3)::after {
 .domestic-project > img,
 .commercial-project > img {
   display: block;
-  width: 97%;
-  margin: 5px 5px 0;
+  width: 100%;
 }
 
 .domestic-project div,
 .commercial-project div {
-  padding: 35px 20px 50px 50px;
+  padding: 35px 15px 50px 45px;
 }
 
 .domestic-project .paragraph,
@@ -417,11 +407,13 @@ option:nth-child(3)::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 60%;
   background: #FFFFFF;
   box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
   border-radius: 0px 40px 0px 0px;
-  position: relative;
-  z-index: 1;
+  padding: 5px 5px 5px 0;
 }
 
 .garden-project {
@@ -435,13 +427,6 @@ option:nth-child(3)::after {
 
 .projects-group_row-two > img {
   width: 52.5%;
-  margin: 5px 5px 5px 0;
-}
-
-.projects-catalog-background {
-  position: absolute;
-  top: 20px;
-  right: -87.5%;
 }
 
 .how-we-build {
@@ -468,7 +453,14 @@ option:nth-child(3)::after {
   border-radius: 8px;
 }
 
+.stage-content {
+  height: 100%;
+}
+
 .stage-description {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
   padding: 40px 40px 50px 45px;
 }
 
@@ -480,40 +472,31 @@ option:nth-child(3)::after {
   padding-top: 15px;
 }
 
-.stage-description img {
+.stage-content img {
   position: absolute;
 }
 
-.construction-stage:nth-child(1) .stage-description img {
+.construction-stage:nth-child(1) .stage-content img {
   right: 25px;
   top: -45px;
 }
 
-.construction-stage:nth-child(2) .stage-description img {
+.construction-stage:nth-child(2) .stage-content img {
   right: 15px;
   top: -80px;
 }
 
-.construction-stage:nth-child(3) .stage-description img {
+.construction-stage:nth-child(3) .stage-content img {
   right: 15px;
   top: -25px;
 }
 
-.construction-stage:nth-child(4) .stage-description img {
+.construction-stage:nth-child(4) .stage-content img {
   right: 40px;
   top: -45px;
 }
 
-.stage-number {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-}
-
-.stage-number::after {
+.stage-description::after {
   position: absolute;
   right: 20px;
   bottom: -30px;
@@ -525,19 +508,19 @@ option:nth-child(3)::after {
   opacity: 0.1;
 }
 
-.construction-stage:nth-child(1) .stage-number::after {
+.construction-stage:nth-child(1) .stage-description::after {
   content: "01";
 }
 
-.construction-stage:nth-child(2) .stage-number::after {
+.construction-stage:nth-child(2) .stage-description::after {
   content: "02";
 }
 
-.construction-stage:nth-child(3) .stage-number::after {
+.construction-stage:nth-child(3) .stage-description::after {
   content: "03";
 }
 
-.construction-stage:nth-child(4) .stage-number::after {
+.construction-stage:nth-child(4) .stage-description::after {
   content: "04";
 }
 
@@ -560,27 +543,21 @@ option:nth-child(3)::after {
 
 .company-official {
   position: relative;
-  padding-top: 45px;
+  padding-top: 10px;
 }
 
-.company-official-background {
+.company-official > img {
   display: block;
   width: 100%;
 }
 
-.company-official-photo {
-  position: absolute;
-  left: calc(50% - 210px);
-  bottom: 0;
-}
-
 .watch-video {
-  position: absolute;
-  left: 700px;
-  bottom: 125px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  left: 710px;
+  bottom: 140px;
   width: 135px;
 }
 
@@ -594,13 +571,14 @@ option:nth-child(3)::after {
 }
 
 .citation {
-  position: absolute;
-  width: 50%;
-  left: calc(50% - 317px);
-  bottom: -95px;
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: -95px;
+  transform: translateX(-50%);
+  width: 45%;
   padding: 40px 50px 35px 45px;
   background: #FFFFFF;
   box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
@@ -670,6 +648,9 @@ option:nth-child(3)::after {
 
 .kinds-of-building {
   background: #FFFBF7;
+}
+
+.kinds-of-building-content {
   padding: 145px 0;
 }
 
@@ -683,17 +664,18 @@ option:nth-child(3)::after {
 }
 
 .building-type {
+  padding: 5px 5px 0;
   background: #FFFFFF;
   box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
   border-radius: 0px 40px 0px 0px;
 }
 
 .building-type img {
-  margin: 5px 5px 0;
+  display: block;
 }
 
 .building-type div {
-  padding: 35px 10px 40px 40px;
+  padding: 35px 5px 40px 35px;
 }
 
 .building-type .head-three {
@@ -711,4 +693,16 @@ option:nth-child(3)::after {
   font-size: 15px;
   line-height: 2em;
   color: #2B2A28;
+}
+
+.last-articles-content {
+  padding: 145px 0 140px;
+}
+
+.last-articles-content .head-two {
+  padding-bottom: 40px;
+}
+
+.article {
+  width: 370px;
 }
