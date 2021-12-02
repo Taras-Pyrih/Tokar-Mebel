@@ -182,10 +182,13 @@ option:nth-child(3)::after {
   padding-top: 20px;
 }
 
+.navigation {
+  width: 70%;
+}
+
 .list {
   display: flex;
   align-items: center;
-  width: 70%;
   background: #3D1E19;
   box-shadow: 0px 0px 20px rgba(43, 42, 40, 0.2);
   border-radius: 8px;
@@ -778,8 +781,6 @@ option:nth-child(3)::after {
   padding: 10px 0;
 }
 
-
-
 .ceo-slider-block {
   position: relative;
   width: 47.5%;
@@ -787,4 +788,73 @@ option:nth-child(3)::after {
 
 .house-screenshot img {
   width: 100%;
+}
+
+.footer {
+  background: #FFFBF7;
+}
+
+.footer-content-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 0 40px;
+}
+
+.footer-content-bottom-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content-bottom-row__left-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.footer-content-bottom-row__right-side {
+  width: 25%;
+}
+
+.footer-content-bottom-row__left-side .column-list {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+.footer-content-bottom-row__left-side .column-list__item {
+  font-size: 14px;
+}
+
+.column-list__link {
+  text-decoration: none;
+  color: #2B2A28;
+}
+
+.footer-content-bottom-row__right-side {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-content-bottom-row__right-side-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-content-bottom-row__right-side-content .contact-us {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.copyright {
+  font-family: Gilroy;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.7em;
+  text-align: center;
+  color: #2B2A28;
+  opacity: 0.7;
+  padding: 30px 0;
 }
