@@ -32,17 +32,23 @@
               <a href="" class="button button_background button_request-a-call">Заказать звонок</a>
               <p class="for-free">Бесплатно по Украине</p>
             </div>
-            <select class="languages">
-              <option value="ua">1
-                <!-- <img src="assets/images/ua.png" alt="ua"> -->
-              </option>
-              <option value="ru">2
-                <!-- <img src="assets/images/ru.png" alt="ru"> -->
-              </option>
-              <option value="en">3
-                <!-- <img src="assets/images/us.png" alt="us"> -->
-              </option>
-            </select>
+            <div class="language-selection">
+              <img src="assets/images/ua.png" alt="ua">
+              <ul class="language-list">
+                <li class="language-list__item">
+                  <img src="assets/images/ua.png" alt="ua">
+                </li>
+                <li class="language-list__item">
+                  <img src="assets/images/ru.png" alt="ru">
+                </li>
+                <li class="language-list__item">
+                  <img src="assets/images/gb.png" alt="gb">
+                </li>
+              </ul>
+              <div class="dropdown-list-arrow">
+                <img src="assets/images/dropdown-list-arrow.svg" alt="dropdown-list-arrow">
+              </div>
+            </div>  
           </div>
         </div>
         <div class="header-content-bottom-row">
@@ -668,6 +674,24 @@
       $(".ceo-slider").on("beforeChange", function(event, slick, currentSlide, nextSlide) {       
         currentHouseScreenshot.innerHTML = `${nextSlide + 1}/${slick.slideCount}`;
       });
+
+      let languageSelection = document.querySelector(".language-selection");
+      let languageList = document.querySelector(".language-list");
+      let dropdownListArrowImg = document.querySelector(".dropdown-list-arrow img");
+
+      languageSelection.addEventListener("click", function () {
+        languageList.classList.toggle("open");
+        dropdownListArrowImg.classList.toggle("active");
+      });
+
+      let languageListItems = document.querySelectorAll(".language-list__item");
+      
+      for (i = 0; i < languageListItems.length; i++) {
+        languageListItems[i].addEventListener("click", function () {
+          let selectedLanguage = this.cloneNode(true);
+          languageSelection.firstElementChild.replaceWith(selectedLanguage);
+        });
+      }
     });
   </script>
 </body>
