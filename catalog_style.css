@@ -156,15 +156,15 @@
   list-style-type: none;
 }
 
-.dropdown-list-arrow {
+.dropdown-list-arrow-one {
   padding: 5px 0 0 5px;
 }
 
-.dropdown-list-arrow img {
+.dropdown-list-arrow-one img {
   display: block;
 }
 
-.dropdown-list-arrow img.active {
+.dropdown-list-arrow-one img.active {
   transform: rotate(0.5turn);
 }
 
@@ -255,6 +255,244 @@
   padding: 20px 0;
 }
 
+.urls {
+  font-family: Gilroy;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5em;
+  padding-top: 55px;
+}
+
+.urls a,
+.urls span {
+  color: #828282;
+}
+
+.url {
+  text-decoration: none;
+}
+
+.residential-building-catalog-content {
+  padding: 30px 0 135px;
+}
+
+.residential-building-catalog-content-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.head-one {
+  font-family: Gilroy;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.6em;
+  color: #2B2A28;
+}
+
+.residential-building-search-block {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  position: relative;
+}
+
+.residential-building-search-block img {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+#residential-building-search {
+  font-family: Gilroy;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5em;
+  color: #828282;
+  padding-left: 5px;
+}
+
+.residential-building-search-block::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border: 1px solid #828282;
+  position: absolute;
+  bottom: -10px;
+}
+
+.residential-building-catalog-content-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.residential-building-catalog-content-bottom-row__left-side {
+  width: 270px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px 20px;
+  margin-bottom: 25px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-data {
+  display: none;
+}
+
+.filter-data.open {
+  display: block;
+}
+
+.head-two {
+  font-family: Gilroy;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #2B2A28;
+}
+
+.filter img.active {
+  transform: rotate(180deg);
+}
+
+.head-three {
+  font-family: Gilroy;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2em;
+  color: #2B2A28;
+  padding-bottom: 10px;
+}
+
+.column-list {
+  list-style-image: url(assets/images/list-style-type-icon.svg);
+  list-style-position: inside;
+}
+
+.column-list__link {
+  font-family: Gilroy;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 2em;
+  text-decoration: none;
+  color: #2B2A28;
+}
+
+.filter-data:nth-child(2),
+.filter-data:nth-child(4) {
+  padding: 0 20px 0; 
+}
+
+.filter-data .column-list {
+  padding-bottom: 30px;
+}
+
+.filter-data .column-list__item:hover .column-list__link {
+  font-family: Gilroy;
+  font-weight: 600;
+  color: #CB8734;
+}
+
+.range-slider {
+  margin-bottom: 15px;
+}
+
+.range-slider.noUi-target {
+  background: #E7D8C7;
+  border-radius: 4px;
+  border: none;
+  box-shadow: none;
+}
+
+.range-slider.noUi-horizontal {
+  height: 3px;
+}
+
+.range-slider .noUi-connect {
+  background: #CB8734;
+}
+
+.range-slider.noUi-horizontal .noUi-handle {
+  width: 17px;
+  height: 17px;
+  top: -7px;
+}
+
+.range-slider.noUi-horizontal .noUi-handle.noUi-handle-lower {
+  right: -17px;
+}
+
+.range-slider.noUi-horizontal .noUi-handle.noUi-handle-upper {
+  right: 0;
+}
+
+.range-slider .noUi-handle {
+  border: none;
+  border-radius: 9px;
+  border: 5px solid #CB8734;
+  background: #FFFFFF;
+  box-shadow: none;
+}
+
+.range-slider .noUi-handle:before,
+.range-slider .noUi-handle:after {
+  display: none;
+}
+
+/* .range-slider .noUi-tooltip {
+  display: none;
+}
+.range-slider .noUi-active .noUi-tooltip {
+  display: block;
+} */
+
+.range-slider.noUi-horizontal .noUi-tooltip {
+  bottom: -625%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 2px;
+  border: none;
+  font-family: Gilroy;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #2B2A28;
+  padding: 5px 10px;
+}
+
+.range-slider.noUi-horizontal .noUi-tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -7.5px;
+  transform: translateX(-50%);
+  border-bottom: 7.5px solid #FFFFFF;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.range-values span {
+  font-family: Gilroy;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #2B2A28;
+}
 
 
 
@@ -262,6 +500,15 @@
 
 
 
+
+
+
+
+
+
+.residential-building-catalog-content-bottom-row__right-side {
+  width: 75%;
+}
 
 
 
@@ -305,11 +552,6 @@
 
 .footer-content-bottom-row__left-side .column-list__item {
   font-size: 14px;
-}
-
-.column-list__link {
-  text-decoration: none;
-  color: #2B2A28;
 }
 
 .footer-content-bottom-row__right-side {

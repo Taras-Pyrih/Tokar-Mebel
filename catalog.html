@@ -5,9 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Style</title>
-	<link rel="stylesheet" href="assets/slick/slick.css">
-	<link rel="stylesheet" href="assets/slick/slick-theme.css">
   <link rel="stylesheet" href="catalog_style.css">
+  <link rel="stylesheet" href="assets/noUiSlider/nouislider.css">
 </head>
 <body>
   <header class="header">
@@ -50,8 +49,8 @@
                   <img src="assets/images/gb.png" alt="gb">
                 </li>
               </ul>
-              <div class="dropdown-list-arrow">
-                <img src="assets/images/dropdown-list-arrow.svg" alt="dropdown-list-arrow">
+              <div class="dropdown-list-arrow-one">
+                <img src="assets/images/dropdown-list-arrow-one.svg" alt="dropdown-list-arrow-one">
               </div>
             </div>  
           </div>
@@ -60,7 +59,7 @@
           <nav class="navigation">
             <ul class="list">
               <li class="list__item">
-                <a href="" class="list__link">Каталог</a>
+                <a href="catalog.html" class="list__link">Каталог</a>
               </li>
               <li class="list__item">
                 <a href="" class="list__link">О компании</a>
@@ -75,13 +74,169 @@
           </nav>
         </div>
       </div>
+      <div class="urls">
+        <a href="index.html" class="url">Главная страница</a><span> / </span><a href="#" class="url">Жилое</a>
+      </div>
     </div>
   </header>
 
+  <main>
+    <section class="residential-building-catalog">
+      <div class="wrapper">
+        <div class="residential-building-catalog-content">
+          <div class="residential-building-catalog-content-top-row">
+            <h1 class="head-one">Каталог жилых строений</h1>
+            <div class="residential-building-search-block">
+              <label for="residential-building-search">
+                <img src="assets/images/search.svg" alt="search">
+              </label>
+              <input type="search" id="residential-building-search" placeholder="Поиск по жилым строениям..." size="60">
+            </div>
+          </div>
 
-
-
-
+          <div class="residential-building-catalog-content-bottom-row">
+            <div class="residential-building-catalog-content-bottom-row__left-side">
+              <div class="filter">
+                <h2 class="head-two">Подкатегория</h2>
+                <img src="assets/images/dropdown-list-arrow-two.svg" alt="dropdown-list-arrow-two">
+              </div>
+              <div class="filter-data">
+                <h3 class="head-three">Дома	и	жилые	строения</h3>
+                <ul class="column-list">
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дома</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дома	из профилированого бруса</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дома из оцилиндрованого бруса</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Каркасные дома</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дома из блока</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дачи</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Коттеджи</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Виллы</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Усадьбы</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Особняки</a>
+                  </li>
+                </ul>
+                <h3 class="head-three">Коммерческие строения</h3>
+                <ul class="column-list">
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Базы отдыха</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Гостинницы</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Рестораны</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Кафе</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Магазины</a>
+                  </li>
+                </ul>
+                <h3 class="head-three">Садовые и хоз постройки</h3>
+                <ul class="column-list">
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Деревянные	бани из	оцилиндрованого бруса</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Деревянные	бани из профилированого бруса</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Каркасные конструкции</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Беседки</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Альтанки</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Гаражи</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Кухни</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Детские игровые площадки</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Деревянные	детские домики</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Мангальные	зоны и барбекю</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter">
+                <h2 class="head-two">Сортировать по:</h2>
+                <img src="assets/images/dropdown-list-arrow-two.svg" alt="dropdown-list-arrow-two">
+              </div>
+              <div class="filter-data">
+                <h3 class="head-three">Сортировать по:</h3>
+                <ul class="column-list">
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Алфавиту</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Популярности</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Цене</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter">
+                <h2 class="head-two">Площадь (м2):</h2>
+                <img src="assets/images/dropdown-list-arrow-two.svg" alt="dropdown-list-arrow-two">
+              </div>
+              <div class="filter-data">
+                <div class="range-slider range-slider_one"></div>
+                <div class="range-values range-values_one">
+                  <span>10</span>
+                  <span>500</span>
+                </div>
+              </div>
+              <div class="filter">
+                <h2 class="head-two">Цена (грн):</h2>
+                <img src="assets/images/dropdown-list-arrow-two.svg" alt="dropdown-list-arrow-two">
+              </div>
+              <div class="filter-data">
+                <div class="range-slider range-slider_two"></div>
+                <div class="range-values range-values_two">
+                  <span>100 000</span>
+                  <span>5 000 000</span>
+                </div>
+              </div>
+            </div>
+  
+  
+  
+  
+            <div class="residential-building-catalog-content-bottom-row__right-side">zxc</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="wrapper">
@@ -90,7 +245,7 @@
           <nav class="navigation">
             <ul class="list">
               <li class="list__item">
-                <a href="" class="list__link">Каталог</a>
+                <a href="catalog.html" class="list__link">Каталог</a>
               </li>
               <li class="list__item">
                 <a href="" class="list__link">О компании</a>
@@ -192,5 +347,96 @@
       публичной офертой.
     </p>
   </footer>
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+  <script src="assets/noUiSlider/nouislider.js"></script>
+  <script src="assets/noUiSlider/wNumb.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      let languageSelection = document.querySelector(".language-selection");
+      let languageList = document.querySelector(".language-list");
+      let dropdownListArrowOneImg = document.querySelector(".dropdown-list-arrow-one img");
+
+      languageSelection.addEventListener("click", function () {
+        languageList.classList.toggle("open");
+        dropdownListArrowOneImg.classList.toggle("active");
+      });
+
+      let languageListItems = document.querySelectorAll(".language-list__item");
+      
+      for (let i = 0; i < languageListItems.length; i++) {
+        languageListItems[i].addEventListener("click", function () {
+          let selectedLanguage = this.cloneNode(true);
+          languageSelection.firstElementChild.replaceWith(selectedLanguage);
+        });
+      }
+
+      let filters = document.querySelectorAll(".filter");
+      let dropdownListArrowTwoImgs = document.querySelectorAll(".filter img");
+      let filtersData = document.querySelectorAll(".filter-data");
+
+      for (let j = 0; j < filters.length; j++) {
+        filters[j].addEventListener("click", function () {
+          dropdownListArrowTwoImgs[j].classList.toggle("active");
+          filtersData[j].classList.toggle("open");
+        });
+      }
+
+
+
+      
+
+
+      let rangeSliderOne = document.querySelector(".range-slider_one");
+
+      noUiSlider.create(rangeSliderOne,{
+        start: [10, 268],
+        connect: [false, true, false],
+        step: 1,
+        tooltips: [
+          wNumb({
+            decimals: 0,
+          }),
+          wNumb({
+            decimals: 0,
+          })
+        ],
+        behaviour: "tap-drag-unconstrained",
+        range: {
+          "min": 10,
+          "max": 500
+        }
+      });
+
+      rangeSliderOne.noUiSlider.on("update", function (values, handle) {
+
+      });
+
+      let rangeSliderTwo = document.querySelector(".range-slider_two");
+
+      noUiSlider.create(rangeSliderTwo,{
+        start: [100000, 2680000],
+        connect: [false, true, false],
+        step: 1,
+        tooltips: [
+          wNumb({
+            decimals: 0,
+            thousand: " "
+          }),
+          wNumb({
+            decimals: 0,
+            thousand: " "
+          })
+        ],
+        behaviour: "tap-drag-unconstrained",
+        range: {
+          "min": 100000,
+          "max": 5000000
+        }
+      });
+    });
+  </script>
 </body>
 </html>

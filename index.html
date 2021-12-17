@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
+  <link rel="stylesheet" href="index_style.css">
 	<link rel="stylesheet" href="assets/slick/slick.css">
 	<link rel="stylesheet" href="assets/slick/slick-theme.css">
-  <link rel="stylesheet" href="index_style.css">
 </head>
 <body>
   <header class="header">
@@ -50,8 +50,8 @@
                   <img src="assets/images/gb.png" alt="gb">
                 </li>
               </ul>
-              <div class="dropdown-list-arrow">
-                <img src="assets/images/dropdown-list-arrow.svg" alt="dropdown-list-arrow">
+              <div class="dropdown-list-arrow-one">
+                <img src="assets/images/dropdown-list-arrow-one.svg" alt="dropdown-list-arrow-one">
               </div>
             </div>  
           </div>
@@ -60,7 +60,7 @@
           <nav class="navigation">
             <ul class="list">
               <li class="list__item">
-                <a href="" class="list__link">Каталог</a>
+                <a href="catalog.html" class="list__link">Каталог</a>
               </li>
               <li class="list__item">
                 <a href="" class="list__link">О компании</a>
@@ -344,10 +344,18 @@
               <div>
                 <h3 class="head-three">Жилые строения</h3>
                 <ul class="column-list">
-                  <li class="column-list__item">Дома	из	профилированого	бруса</li>
-                  <li class="column-list__item">Дома	из	оцилиндрованого	бруса</li>
-                  <li class="column-list__item">Каркасные	дома</li>
-                  <li class="column-list__item">Дома	из	блока</li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дома	из	профилированого	бруса</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дома	из	оцилиндрованого	бруса</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Каркасные	дома</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Дома	из	блока</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -356,11 +364,21 @@
               <div>
                 <h3 class="head-three">Коммерческие</h3>
                 <ul class="column-list">
-                  <li class="column-list__item">Базы	отдыха</li>
-                  <li class="column-list__item">Гостинницы</li>
-                  <li class="column-list__item">Рестораны</li>
-                  <li class="column-list__item">Кафе</li>
-                  <li class="column-list__item">Магазины</li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Базы	отдыха</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Гостинницы</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Рестораны</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Кафе</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Магазины</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -369,14 +387,30 @@
               <div>
                 <h3 class="head-three">Садовые и хозяйские</h3>
                 <ul class="column-list">
-                  <li class="column-list__item">Деревянные	бани</li>
-                  <li class="column-list__item">Беседки</li>
-                  <li class="column-list__item">Альтанки</li>
-                  <li class="column-list__item">Детские	игровые	площадки</li>
-                  <li class="column-list__item">Гаражи</li>
-                  <li class="column-list__item">Деревянные	детские	домики</li>
-                  <li class="column-list__item">Мангальные	зоны и	барбекю</li>
-                  <li class="column-list__item">Кухни</li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Деревянные	бани</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Беседки</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Альтанки</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Детские	игровые	площадки</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Гаражи</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Деревянные	детские	домики</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Мангальные	зоны и	барбекю</a>
+                  </li>
+                  <li class="column-list__item">
+                    <a href="" class="column-list__link">Кухни</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -510,7 +544,7 @@
           <nav class="navigation">
             <ul class="list">
               <li class="list__item">
-                <a href="" class="list__link">Каталог</a>
+                <a href="catalog.html" class="list__link">Каталог</a>
               </li>
               <li class="list__item">
                 <a href="" class="list__link">О компании</a>
@@ -619,6 +653,24 @@
 
   <script>
     $(document).ready(function() {
+      let languageSelection = document.querySelector(".language-selection");
+      let languageList = document.querySelector(".language-list");
+      let dropdownListArrowOneImg = document.querySelector(".dropdown-list-arrow-one img");
+
+      languageSelection.addEventListener("click", function () {
+        languageList.classList.toggle("open");
+        dropdownListArrowOneImg.classList.toggle("active");
+      });
+
+      let languageListItems = document.querySelectorAll(".language-list__item");
+      
+      for (let i = 0; i < languageListItems.length; i++) {
+        languageListItems[i].addEventListener("click", function () {
+          let selectedLanguage = this.cloneNode(true);
+          languageSelection.firstElementChild.replaceWith(selectedLanguage);
+        });
+      }
+
       let leftArrowFirst = document.querySelector(".what-we-do-slider-block .arrow_left");
       let rightArrowFirst = document.querySelector(".what-we-do-slider-block .arrow_right");
 
@@ -693,24 +745,6 @@
       $(".ceo-slider").on("beforeChange", function(event, slick, currentSlide, nextSlide) {       
         currentHouseScreenshot.innerHTML = `${nextSlide + 1}/${slick.slideCount}`;
       });
-
-      let languageSelection = document.querySelector(".language-selection");
-      let languageList = document.querySelector(".language-list");
-      let dropdownListArrowImg = document.querySelector(".dropdown-list-arrow img");
-
-      languageSelection.addEventListener("click", function () {
-        languageList.classList.toggle("open");
-        dropdownListArrowImg.classList.toggle("active");
-      });
-
-      let languageListItems = document.querySelectorAll(".language-list__item");
-      
-      for (i = 0; i < languageListItems.length; i++) {
-        languageListItems[i].addEventListener("click", function () {
-          let selectedLanguage = this.cloneNode(true);
-          languageSelection.firstElementChild.replaceWith(selectedLanguage);
-        });
-      }
       
       let hamburgerMenu = document.querySelector(".hamburger-menu");
       let navigationTop = document.querySelector(".header-content-bottom-row .navigation");
