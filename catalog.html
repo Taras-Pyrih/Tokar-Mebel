@@ -85,15 +85,21 @@
       <div class="wrapper">
         <div class="residential-building-catalog-content">
           <div class="residential-building-catalog-content-top-row">
-            <h1 class="head-one">Каталог жилых строений</h1>
+            <div class="filter-menu">
+              <h1 class="head-one">Каталог жилых строений</h1>
+              <img src="assets/images/filter-icon.svg" alt="filter-icon">
+              <div class="cross-sign">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
             <div class="residential-building-search-block">
               <label for="residential-building-search">
                 <img src="assets/images/search.svg" alt="search">
               </label>
-              <input type="search" id="residential-building-search" placeholder="Поиск по жилым строениям..." size="60">
+              <input type="search" id="residential-building-search" placeholder="Поиск по жилым строениям...">
             </div>
           </div>
-
           <div class="residential-building-catalog-content-bottom-row">
             <div class="residential-building-catalog-content-bottom-row__left-side">
               <div class="filter">
@@ -286,7 +292,6 @@
                       </div>
                   </div>
                 </div>
-
                 <div class="variant">
                   <img src="assets/images/residential-building-catalog/building-2x1.png" alt="building-2x1">
                   <div class="variant__description">
@@ -344,7 +349,6 @@
                       </div>
                   </div>
                 </div>
-
                 <div class="variant">
                   <img src="assets/images/residential-building-catalog/building-3x1.png" alt="building-3x1">
                   <div class="variant__description">
@@ -402,7 +406,6 @@
                       </div>
                   </div>
                 </div>
-
                 <div class="variant">
                   <img src="assets/images/residential-building-catalog/building-4x1.png" alt="building-4x1">
                   <div class="variant__description">
@@ -594,107 +597,6 @@
 	<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
   <script src="assets/noUiSlider/nouislider.js"></script>
   <script src="assets/noUiSlider/wNumb.js"></script>
-
-  <script>
-    $(document).ready(function() {
-      let languageSelection = document.querySelector(".language-selection");
-      let languageList = document.querySelector(".language-list");
-      let dropdownListArrowOneImg = document.querySelector(".dropdown-list-arrow-one img");
-
-      languageSelection.addEventListener("click", function () {
-        languageList.classList.toggle("open");
-        dropdownListArrowOneImg.classList.toggle("active");
-      });
-
-      let languageListItems = document.querySelectorAll(".language-list__item");
-      
-      for (let i = 0; i < languageListItems.length; i++) {
-        languageListItems[i].addEventListener("click", function () {
-          let selectedLanguage = this.cloneNode(true);
-          languageSelection.firstElementChild.replaceWith(selectedLanguage);
-        });
-      }
-
-      let filters = document.querySelectorAll(".filter");
-      let dropdownListArrowTwoImgs = document.querySelectorAll(".filter img");
-      let filtersData = document.querySelectorAll(".filter-data");
-
-      for (let j = 0; j < filters.length; j++) {
-        filters[j].addEventListener("click", function () {
-          dropdownListArrowTwoImgs[j].classList.toggle("active");
-          filtersData[j].classList.toggle("open");
-        });
-      }
-
-      let rangeSliderOne = document.querySelector(".range-slider_one");
-
-      noUiSlider.create(rangeSliderOne,{
-        start: [10, 268],
-        connect: [false, true, false],
-        step: 1,
-        tooltips: [
-          wNumb({
-            decimals: 0,
-          }),
-          wNumb({
-            decimals: 0,
-          })
-        ],
-        behaviour: "tap-drag-unconstrained",
-        range: {
-          "min": 10,
-          "max": 500
-        }
-      });
-
-      rangeSliderOne.noUiSlider.on("update", function (values, handle) {
-
-      });
-
-      let rangeSliderTwo = document.querySelector(".range-slider_two");
-
-      noUiSlider.create(rangeSliderTwo,{
-        start: [100000, 2680000],
-        connect: [false, true, false],
-        step: 1,
-        tooltips: [
-          wNumb({
-            decimals: 0,
-            thousand: " "
-          }),
-          wNumb({
-            decimals: 0,
-            thousand: " "
-          })
-        ],
-        behaviour: "tap-drag-unconstrained",
-        range: {
-          "min": 100000,
-          "max": 5000000
-        }
-      });
-
-      let showMore = document.querySelector(".show-more");
-      let spinIcon = document.querySelector(".show-more img");
-      let variants = document.querySelector(".variants");
-
-      showMore.addEventListener("click", function () {
-        if (spinIcon.className === "pressed-odd") {
-          spinIcon.classList.remove("pressed-odd");
-          spinIcon.classList.add("pressed-even");
-        }
-        else  {
-          spinIcon.classList.add("pressed-odd");
-          spinIcon.classList.remove("pressed-even");
-        };
-
-        let variantsClone = variants.cloneNode(true);
-
-        setTimeout(function () {
-          variants.after(variantsClone);
-        }, 2000);
-      });
-    });
-  </script>
+  <script src="catalog_script.js"></script>
 </body>
 </html>

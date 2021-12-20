@@ -178,10 +178,10 @@
 
 .hamburger-menu {
   position: relative;
+  z-index: 3;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  z-index: 3;
   overflow: hidden;
 }
 
@@ -205,7 +205,7 @@
 }
 
 .hamburger-menu.active span:nth-child(2) {
-  transform: translateX(100%);
+  transform: translate(100%, -50%);
 }
 
 .hamburger-menu.active span:nth-child(1) {
@@ -283,12 +283,57 @@
   padding-bottom: 40px;
 }
 
+.filter-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .head-one {
   font-family: Gilroy;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.6em;
   color: #2B2A28;
+}
+
+.filter-menu img {
+  height: 25px;
+  filter: invert(60%) sepia(53%) saturate(623%) hue-rotate(352deg) brightness(87%) contrast(81%);
+  cursor: pointer;
+}
+
+.cross-sign {
+  position: relative;
+  z-index: 5;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.cross-sign span {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  left: 50%;
+  top: 50%;
+  background: #CB8734;
+}
+
+.cross-sign span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross-sign span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.cross-sign.active {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  display: block;
 }
 
 .residential-building-search-block {
@@ -299,11 +344,12 @@
 }
 
 .residential-building-search-block img {
-  margin-right: 15px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
 #residential-building-search {
+  width: 90%;
   font-family: Gilroy;
   font-weight: 400;
   font-size: 13px;
@@ -359,8 +405,13 @@
   color: #2B2A28;
 }
 
-.filter img.active {
+.filter img {
   transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.filter img.active {
+  transform: rotate(360deg);
 }
 
 .head-three {
@@ -487,7 +538,7 @@
 }
 
 .residential-building-catalog-content-bottom-row__right-side {
-  width: 75%;
+  width: calc(100% - 320px);
 }
 
 .variants {
@@ -499,7 +550,8 @@
 }
 
 .variant {
-  width: 31%;
+  width: 32%;
+  min-width: 280px;
   background: #FFFFFF;
   box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
   border-radius: 0px 40px 0px 0px;
@@ -619,6 +671,9 @@
 }
 
 .develop-a-project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 0 40px 0 60px;
 }
 
@@ -640,7 +695,6 @@
 }
 
 .button_develop-a-project {
-  display: inline-block;
   padding: 25px 60px;
 }
 
@@ -656,11 +710,11 @@
 }
 
 .show-more img.pressed-odd {
-  animation: spin-odd 1s linear 2;
+  animation: spin-odd 0.5s linear 1;
 }
 
 .show-more img.pressed-even {
-  animation: spin-even 1s linear 2;
+  animation: spin-even 0.5s linear 1;
 }
 
 @keyframes spin-odd {
@@ -688,23 +742,6 @@
   line-height: 2em;
   color: #2B2A28;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer {
   background: #FFFBF7;
@@ -773,15 +810,27 @@
   }
 }
 
+@media screen and (min-width: 1051px) {
+  .filter-menu img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .variant {
+    width: 42.5%;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .header-content-bottom-row .navigation {
     position: fixed;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     transform: translateX(-100%);
-    z-index: 2;
     transition: transform 0.5s;
   }
 
@@ -820,15 +869,13 @@
     width: 55%;
   }
 
-  
+  .develop-a-project-content {
+    padding: 0 20px 0 30px;
+  }
 
-
-
-
-
-
-
-
+  .button_develop-a-project {
+    padding: 15px 30px;
+  }
 
   .footer-content-top-row {
     padding: 0 0 40px;
@@ -850,12 +897,35 @@
     width: 85%;
   }
 
-  
+  .residential-building-catalog-content-top-row {
+    flex-direction: column;
+    align-items: flex-start; 
+  }
 
+  .develop-a-project {
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding: 5px 5px 0 5px;
+    margin: 0 auto 35px;
+  }
 
+  .develop-a-project img {
+    order: 1;
+    display: block;
+    width: 100%;
+  }
 
+  .develop-a-project-content {
+    align-items: center;
+    order: 2;
+    padding: 30px 10px;
+  }
 
-
+  .head-four,
+  .develop-a-project-content p {
+    text-align: center;
+  }
 
   .footer-content-bottom-row__left-side {
     width: 60%;
@@ -863,14 +933,13 @@
 }
 
 @media screen and (max-width: 1150px) {
-  
+  .residential-building-catalog-content-bottom-row__left-side {
+    width: 200px;
+  }
 
-
-
-
-
-
-
+  .residential-building-catalog-content-bottom-row__right-side {
+    width: calc(100% - 250px);
+  }
 
   .footer-content-top-row {
     flex-direction: column;
@@ -900,15 +969,31 @@
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .residential-building-catalog-content-bottom-row__left-side {
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background: #FFFFFF;
+    overflow: auto;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .residential-building-catalog-content-bottom-row__left-side.active {
+    transform: translateX(0);
+  }
+
+  .residential-building-catalog-content-bottom-row__right-side {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 950px) {
-  
-
-
-
-
-
-
-
   .footer-content-top-row .navigation {
     width: 100%;
   }
@@ -922,24 +1007,40 @@
   .header-content-top-row__right-side div:nth-child(1) {
     display: none;  
   }
+}
 
-  
+@media screen and (max-width: 730px) {
+  .urls {
+    text-align: center;
+  }
 
+  .residential-building-catalog-content-top-row {
+    align-items: center;
+  }
 
+  .head-one {
+    text-align: center;
+  }
 
+  .residential-building-search-block {
+    width: 70%;
+  }
 
+  .variants {
+    flex-direction: column;
+    align-content: center;
+  }
 
+  .variant {
+    width: 70%;
+  }
+
+  .variant__description {
+    padding: 25px 40px;
+  }
 }
 
 @media screen and (max-width: 700px) {
-  
-
-
-
-
-
-
-
   .footer-content-bottom-row__left-side {
     flex-direction: column;
     gap: 30px;
@@ -951,17 +1052,9 @@
     display: none;  
   }
 
-  
-
-
-
-
-
-
-
-
-
-
+  .variant__description {
+    padding: 25px;
+  }
   
   .footer-content-top-row .navigation .list {
     flex-direction: column;
@@ -975,5 +1068,23 @@
 
   .footer-content-top-row .navigation .list__item:last-child {
     border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .residential-building-search-block {
+    width: 100%;
+  }
+
+  .variant {
+    width: 100%;
+  }
+
+  .develop-a-project {
+    width: 100%;
+  }
+
+  .button_develop-a-project {
+    padding: 15px;
   }
 }
