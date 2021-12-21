@@ -493,8 +493,8 @@
   box-shadow: none;
 }
 
-.range-slider .noUi-handle:before,
-.range-slider .noUi-handle:after {
+.range-slider .noUi-handle::before,
+.range-slider .noUi-handle::after {
   display: none;
 }
 
