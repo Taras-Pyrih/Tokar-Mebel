@@ -1,34 +1,34 @@
 @font-face {
   font-family: Gilroy;
-  src: url(assets/fonts/Gilroy-Light.ttf);
+  src: url(../assets/fonts/Gilroy-Light.ttf);
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
   font-family: Gilroy;
-  src: url(assets/fonts/Gilroy-Regular.ttf);
+  src: url(../assets/fonts/Gilroy-Regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: Gilroy;
-  src: url(assets/fonts/Gilroy-Semibold.ttf);
+  src: url(../assets/fonts/Gilroy-Semibold.ttf);
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
   font-family: Gilroy;
-  src: url(assets/fonts/Gilroy-Bold.ttf);
+  src: url(../assets/fonts/Gilroy-Bold.ttf);
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: Gilroy;
-  src: url(assets/fonts/Gilroy-Extrabold.ttf);
+  src: url(../assets/fonts/Gilroy-Extrabold.ttf);
   font-style: normal;
   font-weight: 800;
 }
@@ -417,7 +417,7 @@
 }
 
 .projects-catalog-content__left-side {
-  background: url(assets/images/projects-catalog-background.png) right no-repeat;
+  background: url(../assets/images/projects-catalog-background.png) right no-repeat;
   background-size: content;
 }
 
@@ -593,7 +593,7 @@
 }
 
 .about-company {
-  background: url(assets/images/about-company-background.png) no-repeat;
+  background: url(../assets/images/about-company-background.png) no-repeat;
   background-size: cover;
 }
 
@@ -743,7 +743,7 @@
 }
 
 .column-list {
-  list-style-image: url(assets/images/list-style-type-icon.svg);
+  list-style-image: url(../assets/images/list-style-type-icon.svg);
   list-style-position: inside;
 }
 
