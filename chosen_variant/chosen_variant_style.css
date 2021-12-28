@@ -50,7 +50,7 @@
 }
 
 .header-content {
-  padding-top: 30px;
+  padding: 30px 0 35px;
 }
 
 .header-content-top-row {
@@ -260,7 +260,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5em;
-  padding-top: 55px;
+  padding-top: 20px;
 }
 
 .urls a,
@@ -314,11 +314,8 @@
 
 .barcelona-variant-slider-nav img {
   width: 100%;
-  margin-bottom: 40px;
-}
-
-.barcelona-variant-slider-nav img {
   border-radius: 0px 40px;
+  margin-bottom: 40px;
 }
 
 .barcelona-variant-slider-nav .slick-current.slick-active {
@@ -411,9 +408,13 @@
 }
 
 .order-a-consultation-content > div {
-  position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+.order-a-consultation-content > div > div {
+  position: relative;
+  width: 62.5%;
 }
 
 .international-telephone-code-select {
@@ -427,7 +428,7 @@
 }
 
 .order-a-consultation-content input {
-  width: 62.5%;
+  width: 100%;
   padding: 20px 0 20px 80px;
   background: #FFFFFF;
   border: 1px solid #E7D8C7;
@@ -545,11 +546,15 @@
   border-radius: 0px 40px 0px 0px;
 }
 
+.sending-data-for-consultation-content > img {
+  border-radius: 0px 36px;
+}
+
 .order-a-consultation-content_second-appearence {
   width: calc(100% - 480px);
 }
 
-.order-a-consultation-content_second-appearence p {
+.order-a-consultation-content_second-appearence p:first-child {
   white-space: pre-line;
 }
 
@@ -570,7 +575,6 @@
 .processes {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 40px 0 145px;
 }
 
@@ -586,7 +590,7 @@
 }
 
 .stage {
-  width: 22.5%;
+  width: 23%;
   padding-top: 30px;
 }
 
@@ -631,7 +635,7 @@
 }
 
 .step {
-  width: 22.5%;
+  width: 23%;
   padding: 30px 30px 35px;
   background: #FFFFFF;
   box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
@@ -775,13 +779,9 @@
     width: 55%;
   }
 
-  
-
-
-
-
-
-
+  .process {
+    min-height: 284px;
+  }
 
   .footer-content-top-row {
     padding: 0 0 40px;
@@ -803,12 +803,13 @@
     width: 85%;
   }
 
-  
+  .arrows_first {
+    left: 72%;
+  }
 
-
-
-
-
+  .barcelona-variant-slider-nav img {
+    border-radius: 0px 30px;
+  }
 
   .footer-content-bottom-row__left-side {
     width: 60%;
@@ -816,12 +817,37 @@
 }
 
 @media screen and (max-width: 1150px) {
+  .barcelona-variant-content-bottom-row {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+  }
+
+  .accurate-calculation {
+    position: static;
+    width: 290px;
+    padding: 30px 25px;
+  }
   
+  .building-characteristic-content-top-row__right-side > div {
+    gap: 40px;
+  }
 
+  .feature {
+    padding: 25px 0 25px 25px;
+  }
 
+  .order-a-consultation-content_first-appearence {
+    width: calc(100% - 360px);
+  }
 
+  .sending-data-for-consultation-content {
+    padding: 5px;
+  }
 
-
+  .step {
+    padding: 30px 20px 35px;
+  }
 
   .footer-content-top-row {
     flex-direction: column;
@@ -851,7 +877,66 @@
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .barcelona-variant-slider-nav img {
+    border-radius: 0px 20px;
+  }
+
+  .sending-data-for-consultation-content {
+    border-radius: 0;
+  }
+
+  .sending-data-for-consultation-content {
+    flex-direction: column;
+  }
+
+  .sending-data-for-consultation-content img {
+    order: 1;
+  }
+
+  .order-a-consultation-content_second-appearence {
+    order: 2;
+    width: 100%;
+  }
+
+  .order-a-consultation-content_second-appearence p:first-child {
+    white-space: normal;
+    text-align: center;
+    padding: 25px 0;
+  }
+
+  .agreement {
+    text-align: center;
+  }
+
+  .step {
+    padding: 30px 10px 35px;
+  }
+}
+
 @media screen and (max-width: 950px) {
+  .arrows_first {
+    left: 70%;
+    top: 88%;
+  }
+
+  .order-a-consultation-content_first-appearence {
+    width: calc(100% - 320px);
+  }
+
+  .building-characteristic-content-top-row__right-side > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature {
+    gap: 20px;
+  }
+
+  .feature p {
+    font-size: 20px;
+  }
+
   .footer-content-top-row .navigation {
     width: 100%;
   }
@@ -861,9 +946,97 @@
   }
 }
 
+@media screen and (max-width: 875px) {
+  .process {
+    min-height: 316px;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .header-content-top-row__right-side div:nth-child(1) {
     display: none;  
+  }
+
+  .barcelona-variant-content-top-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .arrows_first {
+    left: 68%;
+    top: 86%;
+  }
+
+  .barcelona-variant-slider-nav img {
+    border-radius: 0px 10px;
+  }
+
+  .barcelona-variant-content-bottom-row {
+    flex-direction: column;
+  }
+
+  .accurate-calculation {
+    width: 57.5%;
+  }
+
+  .accurate-calculation {
+    text-align: center;
+  }
+
+  .order-a-consultation-content_first-appearence {
+    width: 100%;
+  }
+
+  .order-a-consultation-content_first-appearence p:first-child {
+    text-align: center;
+    padding: 25px 0;
+  }
+  
+  .building-characteristic-content {
+    padding: 40px;
+  }
+
+  .building-characteristic-content-top-row {
+    gap: 25px;
+  }
+
+  .feature {
+    padding: 25px 0 25px 20px;
+    gap: 15px;
+  }
+
+  .feature p {
+    font-size: 18px;
+  }
+
+  .processes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .process {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .stage,
+  .step {
+    width: 100%;
+  }
+
+  .stage {
+    padding-top: 0;
+  }
+
+  .stage__description {
+    min-height: 68px;
+  }
+  
+  .step {
+    min-height: 284px;
   }
 }
 
@@ -872,15 +1045,77 @@
     text-align: center;
   }
 
+  .arrows_first {
+    left: 65%;
+    top: 85%;
+  }
   
+  .accurate-calculation {
+    padding: 30px 20px;
+  }
 
+  .building-characteristic-content .head-two {
+    text-align: center;
+  }
 
+  .building-characteristic-content-top-row {
+    flex-direction: column;    
+  }
+
+  .feature {
+    padding: 25px 0 25px 10px;
+    gap: 10px;
+  }
+
+  .feature p {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .feature {
+    gap: 5px;
+  }
+  
+  .process {
+    width: 31.5%;
+  }
+
   .footer-content-bottom-row__left-side {
     flex-direction: column;
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .work-process-content .head-two {
+    text-align: center;
+  }
+
+  .processes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process {
+    width: 60%;
+  }
+
+  .stage {
+    padding-top: 30px;
+  }
+
+  .process:first-child .stage {
+    padding-top: 0;
+  }
+  
+  .stage__description {
+    min-height: auto;
+  }
+
+  .step {
+    min-height: 252px;
+    padding: 30px 30px 35px;
   }
 }
 
@@ -889,11 +1124,66 @@
     display: none;  
   }
 
-  
+  .barcelona-variant-slider-for {
+    width: 100%;
+  }
 
+  .arrows_first {
+    left: 75%;
+  }
 
+  .barcelona-variant-slider-nav {
+    display: none;
+  }
 
-  
+  .accurate-calculation {
+    width: 75%;
+  }
+
+  .building-characteristic-content-bottom-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    gap: 35px;
+    min-width: 227px;
+    padding: 25px;
+    border-left: none;
+    border-top: 1px solid #E7D8C7;
+  }
+
+  .feature:last-child {
+    border-right: none;
+    border-bottom: 1px solid #E7D8C7;
+  }
+
+  .feature p {
+    font-size: 24px;
+  }
+
+  .plannings-content .head-two {
+    text-align: center;
+  }
+
+  .planning-views {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .planning-views img {
+    width: 75%;
+    margin: auto;
+  }
+
+  .sending-data-for-consultation-content {
+    border-radius: 0px 40px 0px 0px;
+  }
+
+  .sending-data-for-consultation-content img {
+    width: 100%;
+  }
+
   .footer-content-top-row .navigation .list {
     flex-direction: column;
   }
@@ -906,5 +1196,63 @@
 
   .footer-content-top-row .navigation .list__item:last-child {
     border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .process {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .urls {
+    font-size: 10px;
+  }
+
+  .arrows_first {
+    left: 70%;
+    top: 83%;
+  }
+
+  .accurate-calculation {
+    width: 100%;
+  }
+
+  .order-a-consultation-content > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .order-a-consultation-content > div > div {
+    width: 100%;
+  }
+
+  .button_order-a-consultation {
+    width: 50%;
+    padding: 20px 30px;
+  }
+
+  .building-characteristic-content .head-two {
+    font-size: 26px;
+  }
+
+  .building-characteristic-content-top-row img {
+    max-width: 100%;
+  }
+
+  .planning-views img {
+    width: 100%;
+  }
+
+  .process {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .process {
+    width: 90%;
   }
 }

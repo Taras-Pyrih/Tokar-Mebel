@@ -101,11 +101,11 @@ $(document).ready(function() {
     navigationTop.classList.toggle("active");
   });
 
-  let filerIcon = document.querySelector(".filter-menu img");
+  let filterIcon = document.querySelector(".filter-menu img");
   let residentialBuildingCatalogFilters = document.querySelector(".residential-building-catalog-content-bottom-row__left-side");
   let crossSign = document.querySelector(".cross-sign");
 
-  filerIcon.addEventListener("click", function () {
+  filterIcon.addEventListener("click", function () {
     residentialBuildingCatalogFilters.classList.add("active");
     crossSign.classList.add("active");
   });
