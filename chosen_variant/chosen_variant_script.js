@@ -52,16 +52,58 @@ $(document).ready(function() {
 
   let leftHorizontalSlickList = document.querySelector('.barcelona-variant-slider-for .slick-list');
   let barcelonaVariantSliderNav = document.querySelector('.barcelona-variant-slider-nav');
- 
+  
   barcelonaVariantSliderNav.style.height = `${leftHorizontalSlickList.offsetHeight}px`;
 
   let currentRightImage = document.querySelector(".barcelona-variant-slider-nav .slick-current.slick-active");
-  let difference = (leftHorizontalSlickList.offsetHeight - currentRightImage.offsetHeight * 4) / 4;
-  let rightImages = document.querySelectorAll(".barcelona-variant-slider-nav img");
 
-  for (let j = 0; j < rightImages.length; j++) {
-    rightImages[j].style.marginBottom = `${difference + 1}px`
+  if (currentRightImage) {
+    let difference = (leftHorizontalSlickList.offsetHeight - currentRightImage.offsetHeight * 4) / 4;
+    let rightImages = document.querySelectorAll(".barcelona-variant-slider-nav img");
+    
+    for (let j = 0; j < rightImages.length; j++) {
+      rightImages[j].style.marginBottom = `${difference + 1}px`;
+    }
   }
+
+  let getAccurateCalculationButton = document.querySelector(".button_get-accurate-calculation");
+  let orderAConsultationButton = document.querySelector(".button_order-a-consultation");
+  let input = document.querySelector(".order-a-consultation-content_first-appearence input");
+  let modalWindowOne = document.querySelector(".modal-window-one");
+  let closeIconOne = document.querySelector(".close-icon_one");
+  let modalWindowTwo = document.querySelector(".modal-window-two");
+  let closeIconTwo = document.querySelector(".close-icon_two");
+  let modalWindowBackground = document.querySelector(".modal-window-background");
+
+  getAccurateCalculationButton.addEventListener("click", function () {
+    modalWindowOne.style.display = "block";
+    modalWindowBackground.style.display = "block";
+  });
+
+  closeIconOne.addEventListener("click", function () {
+    modalWindowOne.style.display = "";
+    modalWindowBackground.style.display = "";
+  });
+
+  orderAConsultationButton.addEventListener("click", function () {
+    if (!input.value) {
+      return;
+    }
+    
+    modalWindowTwo.style.display = "block";
+    modalWindowBackground.style.display = "block";
+  });
+
+  closeIconTwo.addEventListener("click", function () {
+    modalWindowTwo.style.display = "";
+    modalWindowBackground.style.display = "";
+  });
+
+  modalWindowBackground.addEventListener("click", function () {
+    modalWindowOne.style.display = "";
+    modalWindowTwo.style.display = "";
+    modalWindowBackground.style.display = "";
+  });
 
   let hamburgerMenu = document.querySelector(".hamburger-menu");
   let navigationTop = document.querySelector(".header-content-bottom-row .navigation");
