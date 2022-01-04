@@ -1026,11 +1026,8 @@
   }
 
   .sending-data-for-consultation-content {
-    border-radius: 0;
-  }
-
-  .sending-data-for-consultation-content {
     flex-direction: column;
+    border-radius: 0;
   }
 
   .sending-data-for-consultation-content img {
