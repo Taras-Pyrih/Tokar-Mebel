@@ -135,10 +135,12 @@
 
 .language-selection > img:first-child,
 .language-list__item img {
+  display: block;
   width: 21px;
   height: 15px;
   border: 1px solid #000000;
   border-radius: 2px;
+  margin-bottom: 4px;
 }
 
 .language-list {
@@ -538,7 +540,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 145px 0;
   padding: 5px 5px 5px 80px;
   background: #FFFBF7;
   border-radius: 0px 40px 0px 0px;
@@ -1124,6 +1125,11 @@
 
   .performance-indicator {
     width: 60%;
+  }
+
+  .reasons-why-content .head-two,
+  .reasons-why-list div {
+    text-align: center;
   }
 
   .reasons-why-list {

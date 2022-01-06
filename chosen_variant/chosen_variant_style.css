@@ -135,10 +135,12 @@
 
 .language-selection > img:first-child,
 .language-list__item img {
+  display: block;
   width: 21px;
   height: 15px;
   border: 1px solid #000000;
   border-radius: 2px;
+  margin-bottom: 4px;
 }
 
 .language-list {
