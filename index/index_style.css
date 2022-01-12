@@ -926,6 +926,10 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .header-content-bottom-row {
+    padding-top: 0;
+  }
+  
   .header-content-bottom-row .navigation {
     position: fixed;
     left: 0;
@@ -1348,13 +1352,21 @@
   .header-content-top-row__right-side div:nth-child(2) {
     display: none;  
   }
+  
+  .projects-catalog-content {
+    padding: 75px 0 45px;
+  }
 
   .about-company {
     background: none;
   }
 
   .about-company-content {
-    padding: 140px 0 0;
+    padding: 70px 0 0;
+  }
+
+  .about-company-content .head-two {
+    text-align: center;
   }
   
   .key-performance-indicators {
@@ -1364,6 +1376,18 @@
 
   .performance-indicator {
     width: 50%;
+  }
+
+  .kinds-of-building-content {
+    padding: 75px 0 0;
+  }
+
+  .last-articles-content {
+    padding: 75px 0 70px;
+  }
+
+  .ceo-content {
+    padding-bottom: 80px;
   }
   
   .footer-content-top-row .navigation .list {

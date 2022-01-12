@@ -346,7 +346,7 @@
 .contact-details > div > div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding-bottom: 10px;
 }
 
@@ -370,6 +370,10 @@
   color: #CB8734;
   text-decoration: none;
   border-bottom: 1px dashed #CB8734;
+}
+
+.action span {
+  display: inline-block;
 }
 
 .address {
@@ -492,20 +496,15 @@
 
 .requisites {
   display: flex;
-  justify-content: space-between;
-}
-
-.requisites-group {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 31.5%;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 .requisite {
   display: flex;
   align-items: center;
   gap: 40px;
+  width: calc(100%/3 - 2*25px/3);
   min-height: 152px;
   padding: 40px 30px;
   background: #FFFFFF;
@@ -679,11 +678,13 @@
   }
 }
 
+@media screen and (max-width: 1500px) {
+  .mail .data p span {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 1480px) {
-  
-
-
-
   .last-articles-content .head-two {
     text-align: center;
   }
@@ -694,6 +695,14 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .header-content {
+    padding-bottom: 0;
+  }
+
+  .header-content-bottom-row {
+    padding-top: 0;
+  }
+
   .header-content-bottom-row .navigation {
     position: fixed;
     left: 0;
@@ -740,11 +749,19 @@
     width: 55%;
   }
 
-  
+  .requisite {
+    gap: 25px;
+    min-height: 126px;
+    padding: 30px 20px;
+  }
 
-  
+  .requisite p:first-child {
+    font-size: 18px;
+  }
 
-  
+  .requisite p:last-child {
+    font-size: 15px;
+  }
 
   .footer-content-top-row {
     padding: 0 0 40px;
@@ -766,20 +783,66 @@
     width: 85%;
   }
 
-  
-  
+  .telephones .data p span {
+    display: block;
+  }
 
   .footer-content-bottom-row__left-side {
     width: 60%;
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .contacts-content {
+    padding-bottom: 70px;
+  }
+
+  .company-details-content {
+    padding: 70px 0;
+  }
+
+  .requisite {
+    gap: 40px;
+    width: calc(100%/2 - 25px/2);
+    min-height: 152px;
+    padding: 40px 30px;
+  }
+
+  .requisite p:first-child {
+    font-size: 20px;
+  }
+
+  .requisite p:last-child {
+    font-size: 16px;
+  }
+
+  .last-articles-content {
+    padding-top: 70px;
+  }
+}
+
 @media screen and (max-width: 1150px) {
+  .contacts-content-bottom-row__left-side > p:first-child {
+    font-size: 24px;
+    padding-bottom: 25px;
+  }
   
+  .contact-details > div {
+    padding: 15px 30px 25px 25px;
+  }
 
-  
+  .address {
+    padding: 45px 0 0 25px;
+  }
 
-  
+  .order-a-consultation-content {
+    padding: 30px 40px 20px;
+  }
+
+  .order-a-consultation-content p:first-child {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
 
   .footer-content-top-row {
     flex-direction: column;
@@ -809,10 +872,54 @@
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .contact-details > div > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact-details > div > div img {
+    order: 1;
+  }
+
+  .contact-details > div > div > div {
+    order: 2;
+  }
+
+  .telephones .data p span {
+    display: inline;
+  }
+}
+
 @media screen and (max-width: 950px) {
+  .contacts-content-top-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .telephones .data p span {
+    display: block;
+  }
   
+  .requisites {
+    gap: 20px;
+  }
 
+  .requisite {
+    gap: 15px;
+    width: calc(100%/2 - 20px/2);
+    min-height: 126px;
+    padding: 30px 20px;
+  }
 
+  .requisite p:first-child {
+    font-size: 18px;
+  }
+
+  .requisite p:last-child {
+    font-size: 15px;
+  }
 
   .arrows_first {
     right: 50%;
@@ -834,19 +941,148 @@
     display: none;  
   }
 
-  
+  .caption {
+    font-size: 22px;
+  }
 
+  .data p {
+    font-size: 14px;
+  }
 
+  .action {
+    font-size: 14px;
+  }
+
+  .requisite {
+    min-height: 112px;
+    padding: 25px 15px;
+  }
+
+  .requisite p:first-child {
+    font-size: 17px;
+  }
+
+  .requisite p:last-child {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .urls,
+  .contacts-content-top-row .head-one,
+  .order-a-consultation-content p:first-child,
+  .agreement {
+    text-align: center;
+  }
+
+  .contacts-content {
+    padding-bottom: 35px;
+  }
+
+  .contacts-content-top-row {
+    align-items: center;
+  }
+
+  .contacts-content-bottom-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contacts-content-bottom-row__right-side {
+    width: 80%;
+    order: 1;
+  }
+
+  .contacts-content-bottom-row__left-side {
+    width: 80%;
+    order: 2;
+  }
+
+  .contacts-content-bottom-row__left-side > p:first-child {
+    text-align: center;
+  }
+
+  .contact-details > div {
+    padding: 30px 45px 40px 40px;
+  }
+
+  .contact-details > div > div {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .contact-details > div > div > div {
+    order: 1;
+  }
+
+  .contact-details > div > div img {
+    order: 2;
+  }
+
+  .caption {
+    font-size: 24px;
+  }
+
+  .data p {
+    font-size: 16px;
+  }
+
+  .telephones .data p span {
+    display: inline;
+  }
+
+  .action {
+    font-size: 16px;
+  }
+
+  .company-details-content {
+    padding: 35px 0;
+  }
+
+  .last-articles-content {
+    padding: 35px 0 75px;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .contact-details > div {
+    padding: 15px 30px 25px 25px;
+  }
+
+  .company-details-content .head-two {
+    text-align: center;
+  }
+
+  .requisites {
+    justify-content: center;
+    gap: 25px;
+  }
   
-
-
+  .requisite {
+    gap: 40px;
+    width: 75%;
+    min-height: 152px;
+    padding: 40px 30px;
+  }
+  
+  .requisite p:first-child {
+    font-size: 20px;
+  }
+  
+  .requisite p:last-child {
+    font-size: 16px;
+  }
 
   .footer-content-bottom-row__left-side {
     flex-direction: column;
     gap: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .telephones .data p span {
+    display: block;
   }
 }
 
@@ -855,11 +1091,18 @@
     display: none;  
   }
 
-  
+  .contacts-content-bottom-row__right-side,
+  .contacts-content-bottom-row__left-side {
+    width: 100%;
+  }
 
+  .contact-details > div {
+    padding: 30px 45px 40px 40px;
+  }
 
-
-  
+  .requisite {
+    width: 85%;
+  }
 
   .footer-content-top-row .navigation .list {
     flex-direction: column;
@@ -877,11 +1120,36 @@
 }
 
 @media screen and (max-width: 520px) {
+  .contacts-content-bottom-row__left-side {
+    width: 80%;
+  }
+
+  .contact-details > div {
+    text-align: center;
+    padding: 15px 25px 25px 20px;
+  }
   
+  .contact-details > div > div {
+    flex-direction: column;
+    align-items: center;
+  }
 
-  
+  .contact-details > div > div img {
+    order: 1;
+  }
 
+  .contact-details > div > div > div {
+    order: 2;
+  }
 
+  .address {
+    text-align: center;
+    padding: 45px 0 0;
+  }
+
+  .requisite {
+    width: 100%;
+  }
 
   .article .article-content {
     width: 100%;
@@ -889,5 +1157,38 @@
 
   .article .article-content img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .user {
+    left: 15px;
+  }
+
+  .international-telephone-code-select {
+    left: 15px;
+  }
+
+  .order-a-consultation-content input[type="text"],
+  .order-a-consultation-content input[type="tel"] {
+    padding-left: 70px;
+  }
+
+  .contacts-content-bottom-row__left-side {
+    width: 100%;
+  }
+
+  .requisite {
+    gap: 5%;
+    min-height: 126px;
+    padding: 30px 20px;
+  }
+
+  .requisite p:first-child {
+    font-size: 18px;
+  }
+
+  .requisite p:last-child {
+    font-size: 15px;
   }
 }

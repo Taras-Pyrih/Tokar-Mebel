@@ -21,8 +21,25 @@ $(document).ready(function() {
   let iframe = document.querySelector(".map iframe");
   
   map.style.width = "100%";
-  map.style.height = `${parseInt(getComputedStyle(map).height) - 4}px`;
+
+  if (document.body.offsetWidth > 1150) {
+    map.style.height = "800px";
+  }
+  else if (document.body.offsetWidth <= 1150 && document.body.offsetWidth > 750) {
+    map.style.height = "700px";
+  }
+  else if (document.body.offsetWidth <= 750 && document.body.offsetWidth > 610) {
+    map.style.height = "600px";
+  }
+  else if (document.body.offsetWidth <= 610 && document.body.offsetWidth > 450) {
+    map.style.height = "500px";
+  }
+  else {
+    map.style.height = "400px";
+  }
+  
   iframe.style.width = "100%";
+  iframe.style.height = "100%";
 
   let leftArrowFirst = document.querySelector(".last-articles-slider-block .arrow_left");
   let rightArrowFirst = document.querySelector(".last-articles-slider-block .arrow_right");
