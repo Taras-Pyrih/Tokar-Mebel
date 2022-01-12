@@ -135,10 +135,12 @@
 
 .language-selection > img:first-child,
 .language-list__item img {
+  display: block;
   width: 21px;
   height: 15px;
   border: 1px solid #000000;
   border-radius: 2px;
+  margin-bottom: 4px;
 }
 
 .language-list {
@@ -876,6 +878,14 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .header-content {
+    padding-bottom: 0;
+  }
+
+  .header-content-bottom-row {
+    padding-top: 0;
+  }
+
   .header-content-bottom-row .navigation {
     position: fixed;
     z-index: 2;
@@ -971,6 +981,10 @@
     width: 290px;
     padding: 30px 25px;
   }
+
+  .building-characteristic-content {
+    margin: 75px 0;
+  }
   
   .building-characteristic-content-top-row__right-side > div {
     gap: 40px;
@@ -985,11 +999,16 @@
   }
 
   .sending-data-for-consultation-content {
+    margin: 75px 0;
     padding: 5px;
   }
 
   .step {
     padding: 30px 20px 35px;
+  }
+
+  .processes {
+    padding: 40px 0 75px;
   }
 
   .footer-content-top-row {
